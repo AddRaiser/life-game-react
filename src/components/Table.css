@@ -1,0 +1,13 @@
+.table {
+  border-collapse: collapse;
+}
+
+.table__cell {
+  width: 20px;
+  height: 20px;
+  border: 2px solid grey;
+}
+
+.table__cell_active {
+  background: limegreen;
+}
