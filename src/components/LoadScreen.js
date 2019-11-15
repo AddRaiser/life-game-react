@@ -27,8 +27,8 @@ class LoadScreen extends React.Component {
             <div className={'loadScreenContainer'}>
                 <div className={'loadScreen'}>
                     <h1>Игра "Жизнь"</h1>
-                    <p>Введите ширину стола в клетках <input name='width' type="text" onChange={this.handleInputChange} /></p>
-                    <p>Введите высоту стола в клетках <input name='height' type="text" onChange={this.handleInputChange} /></p>
+                    <p className={'loadScreen__inputLabel'}>Введите ширину стола в клетках <input name='width' type="text" onChange={this.handleInputChange} placeholder='Лучше не больше 100'/></p>
+                    <p className={'loadScreen__inputLabel'}>Введите высоту стола в клетках <input name='height' type="text" onChange={this.handleInputChange} placeholder='Лучше не больше 100'/></p>
                     <button className={'btn'} onClick={this.props.changeSize.bind(this, +this.state.width, +this.state.height)}>Начать игру</button>
                 </div>
             </div>

@@ -97,7 +97,7 @@ class Table extends React.Component {
   }
 
   saveTable() {
-    this.setState({isIterating: false});
+    if (this.state.isIterating) this.toggleIterations();
     let tableName = prompt('Введите имя сохранения:', '');
     // Легкий способ скопировать многомерный массив
     let tableCopy = JSON.parse(JSON.stringify(this.state.tableArray));
@@ -107,6 +107,7 @@ class Table extends React.Component {
   }
 
   loadTable() {
+    if (this.state.isIterating) this.toggleIterations();
     let savedTables = '';
     for (let name of this.state.savedTables.keys()) {
       savedTables += name + ', '
